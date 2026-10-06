@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body, #root {
+    background-color: #0C0C0C;
+    color: #D7E2EA;
+    font-family: 'Kanit', sans-serif;
+    min-height: 100%;
+    overflow-x: clip;
+  }
+}
+
+/* 2D Pixelated Styled Heading Formats - Font & Sizes Preserved */
+.hero-heading, .pixel-heading {
+  font-family: 'Kanit', sans-serif;
+  background-image: 
+    radial-gradient(circle, rgba(12, 12, 12, 0.45) 1.2px, transparent 1.2px),
+    linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  background-size: 4px 4px, 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* Stepped 2D retro pixelated drop-shadow */
+  filter: drop-shadow(2px 2px 0px #000000)
+          drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.9));
+  image-rendering: pixelated;
+}
+
+.pixel-heading-dark {
+  font-family: 'Kanit', sans-serif;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.45) 1.2px, transparent 1.2px),
+    linear-gradient(180deg, #0C0C0C 0%, #2A2A2A 100%);
+  background-size: 4px 4px, 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.25))
+          drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.1));
+  image-rendering: pixelated;
+}
+
